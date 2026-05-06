@@ -140,7 +140,16 @@ git log --oneline --graph --all
 
 2. Branch off to `feature` and add 2 commits
 3. Add 1 more commit to `main` so branches diverge
+
+![add commit in main after feature commits](./figs/add-commit-in-main-after-feature-commits.png)
+
 4. Run `git log --oneline --graph --all -5` to visualize before state
+
+![](./figs/git-log-show-main-and-feature-commits.png)
+
+now we can see only main commits
+
+![](./figs/git-log-show-only-main-commits.png)
 
 ### git merge
 
