@@ -33,11 +33,12 @@ gitGraph
    commit id: "B"
    commit id: "C"
    branch feature
+   checkout feature
    commit id: "D"
    commit id: "E"
 ```
 
-**After merge:**
+**After merge** (history stays branched):
 
 ```mermaid
 gitGraph
@@ -45,6 +46,7 @@ gitGraph
    commit id: "B"
    commit id: "C"
    branch feature
+   checkout feature
    commit id: "D"
    commit id: "E"
    checkout main
@@ -69,18 +71,18 @@ gitGraph
    commit id: "B"
    commit id: "C"
    branch feature
+   checkout feature
    commit id: "D"
    commit id: "E"
 ```
 
-**After rebase** (feature commits re-applied one by one on top of main, with new hashes):
+**After rebase** (history becomes linear — D and E replaced by D' and E' with new hashes):
 
 ```mermaid
 gitGraph
    commit id: "A"
    commit id: "B"
    commit id: "C"
-   branch feature
    commit id: "D'"
    commit id: "E'"
 ```
