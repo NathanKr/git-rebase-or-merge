@@ -54,12 +54,12 @@ git log --oneline --graph --all
 
 ## Decision Guide
 
-| Goal                  | Command  |
-|-----------------------|----------|
-| Update my branch      | rebase   |
-| Combine branches      | merge    |
-| Prepare clean PR      | rebase   |
-| Finalize feature      | merge    |
+| Goal                  | Command  | Why                                     |
+|-----------------------|----------|-----------------------------------------|
+| Update my branch      | rebase   | Keeps history linear, no merge commit   |
+| Combine branches      | merge    | Preserves full history of both branches |
+| Prepare clean PR      | rebase   | Cleaner diff for reviewers              |
+| Finalize feature      | merge    | Creates explicit record of the merge    |
 
 ## Key Takeaways
 - [Item 1]
