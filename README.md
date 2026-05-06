@@ -45,6 +45,8 @@ Use when: working on shared/public branches, or you want accurate history.
 
 Replays commits on top of another branch. Creates new commit hashes.
 
+> `feature` branch rebases onto `main`
+
 **Before rebase:**
 
 ```mermaid
