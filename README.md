@@ -23,10 +23,16 @@ in many ocations you ask AI question and sometime it use git merge and somtime g
 
 Combines branches with a merge commit. Does not rewrite commits.
 
-```
-A---B---C---------M
-         \       /
-          D---E
+```mermaid
+gitGraph
+   commit id: "A"
+   commit id: "B"
+   commit id: "C"
+   branch feature
+   commit id: "D"
+   commit id: "E"
+   checkout main
+   merge feature id: "M"
 ```
 
 Use when: working on shared/public branches, or you want accurate history.
@@ -35,8 +41,13 @@ Use when: working on shared/public branches, or you want accurate history.
 
 Replays commits on top of another branch. Creates new commit hashes.
 
-```
-A---B---C---D'---E'
+```mermaid
+gitGraph
+   commit id: "A"
+   commit id: "B"
+   commit id: "C"
+   commit id: "D'"
+   commit id: "E'"
 ```
 
 Use when: cleaning up local branches, or before opening a PR.
