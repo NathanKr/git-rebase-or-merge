@@ -76,15 +76,15 @@ gitGraph
    commit id: "E"
 ```
 
-**After rebase** (history becomes linear — D and E replaced by D' and E' with new hashes):
+**After rebase** (history becomes linear — D and E replaced by D1 and E1 with new hashes):
 
 ```mermaid
 gitGraph
    commit id: "A"
    commit id: "B"
    commit id: "C"
-   commit id: "D'"
-   commit id: "E'"
+   commit id: "D1"
+   commit id: "E1"
 ```
 
 Use when: cleaning up local branches, or before opening a PR.
