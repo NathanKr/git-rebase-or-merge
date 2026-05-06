@@ -59,7 +59,7 @@ gitGraph
    commit id: "E"
 ```
 
-**After rebase** (feature replayed on top of main):
+**After rebase** (feature commits re-applied one by one on top of main, with new hashes):
 
 ```mermaid
 gitGraph
