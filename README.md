@@ -134,7 +134,7 @@ git log --oneline --graph --all
 
 ### Setup
 
-1. Create `main` branch with 2-3 commits (simple text files)
+1. Create `main` branch with few commits (e.g. edit README.md) and Run `git log --oneline --graph --all -5` to visualize 
 2. Branch off to `feature` and add 2 commits
 3. Add 1 more commit to `main` so branches diverge
 4. Run `git log --oneline --graph --all -5` to visualize before state
