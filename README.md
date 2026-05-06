@@ -55,7 +55,7 @@ gitGraph
 
 > `M` = merge commit (auto-created by git to join the two branches)
 
-Use when: working on shared/public branches, or you want accurate history.
+Use when: working on shared/public branches — merge preserves the full history so others can see exactly what happened and when.
 
 ### git rebase (rewrites history)
 
@@ -87,7 +87,7 @@ gitGraph
    commit id: "E1"
 ```
 
-Use when: cleaning up local branches, or before opening a PR.
+Use when: cleaning up local branches or before opening a PR — rebase makes history linear so reviewers see a clean, easy-to-follow commit sequence.
 
 ### How commits behave
 
