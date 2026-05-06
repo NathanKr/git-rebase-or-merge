@@ -157,6 +157,11 @@ We can see the two new commits in feature branch (in red) on top of the commits 
 ![list commit in feature branch](./figs/list-commit-in-feature-branch.png)
 
 3. Add 1 more commit to `main` so branches diverge
+
+![add commit in main after feature commits](./figs/add-fig-in-main-after-feature-commits.png)
+
+![git log after adding commit in main](./figs/add-commit-in-main-after-feature-commits.png)
+
 4. Run `git log --oneline --graph --all -5` to visualize before state
 
 ![](./figs/git-log-show-main-and-feature-commits.png)
