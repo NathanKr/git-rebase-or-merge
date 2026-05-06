@@ -80,6 +80,7 @@ gitGraph
    commit id: "A"
    commit id: "B"
    commit id: "C"
+   branch feature
    commit id: "D'"
    commit id: "E'"
 ```
