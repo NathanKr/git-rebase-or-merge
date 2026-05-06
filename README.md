@@ -110,8 +110,9 @@ git log --oneline --graph --all
 | Finalize feature      | merge    | Creates explicit record of the merge    |
 
 ## Key Takeaways
-- [Item 1]
-- [Item 2]
+- Rule of thumb: local/feature branch → rebase; shared/public branch → merge.
+- Rebase branches you fully control; merge branches others depend on.
+- Rebase is often used before merge — clean up your branch first, then merge into the target branch (never rebase a branch others are actively using).
 
 ## Installation
 
