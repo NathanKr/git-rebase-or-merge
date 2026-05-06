@@ -9,7 +9,11 @@
 
 ## Motivation
 
-...
+in many ocations you ask AI question and sometime it use git merge and somtime git rebase so question is
+- what exactly each does 
+- when to use each ?
+- how commit playes in
+- can we see it grphically
 
 ## Key Takeaways
 - [Item 1]
@@ -25,35 +29,7 @@
 
 ## Technologies Used
 
-...
-
-## Design
-
-### Context / Facts
-
-### Questions
-
-...
-
-
-### Constraints
-
-...
-
-
-### Three Design Options
-- [Item 1]
-- [Item 2]
-- [Item 3]
-
-
-### Chosen Design
-
-...
-
-###  Mermaid diagram (sequence , flowchart , class , state)
-
-...
+- git
 
 ## Code Structure
 
