@@ -76,7 +76,7 @@ gitGraph
    commit id: "E"
 ```
 
-**After rebase** (history becomes linear — D and E replaced by D1 and E1 with new hashes):
+**After rebase** (history becomes linear — D1 and E1 have the same changes as D and E but with new hashes):
 
 ```mermaid
 gitGraph
