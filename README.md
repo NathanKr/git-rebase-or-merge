@@ -17,6 +17,8 @@ in many ocations you ask AI question and sometime it use git merge and somtime g
 
 ## Core Concepts: git merge vs git rebase
 
+> Notation: each letter (A, B, C…) represents a commit; `---` is the chain over time (left = oldest, right = newest).
+
 ### git merge (preserves history)
 
 Combines branches with a merge commit. Does not rewrite commits.
