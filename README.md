@@ -175,6 +175,7 @@ now we can see only main commits
 
 #### 5. `git checkout main && git merge feature`
 #### 6. Run `git log --oneline --graph -7` to see merge commit M
+> `--all` omitted — shows only main's result after merge, not all branches.
 
 The merge commit is in red
 
@@ -187,6 +188,7 @@ The merge commit is in red
 #### 7. Reset to before-merge state
 #### 8. `git checkout feature && git rebase main`
 #### 9. Run `git log --oneline --graph -5` to see linear history
+> `--all` omitted — shows only feature's linear history after rebase.
 
 <!-- add image here -->
 
