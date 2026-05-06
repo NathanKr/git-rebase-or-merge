@@ -137,12 +137,12 @@ git log --oneline --graph --all
 1. Create `main` branch with 2-3 commits (simple text files)
 2. Branch off to `feature` and add 2 commits
 3. Add 1 more commit to `main` so branches diverge
-4. Run `git log --oneline --graph --all` to visualize before state
+4. Run `git log --oneline --graph --all -5` to visualize before state
 
 ### git merge
 
 5. `git checkout main && git merge feature`
-6. Run `git log --oneline --graph --all` to see merge commit M
+6. Run `git log --oneline --graph --all -5` to see merge commit M
 
 <!-- add image here -->
 
@@ -150,7 +150,7 @@ git log --oneline --graph --all
 
 7. Reset to before-merge state
 8. `git checkout feature && git rebase main`
-9. Run `git log --oneline --graph --all` to see linear history
+9. Run `git log --oneline --graph --all -5` to see linear history
 
 <!-- add image here -->
 
