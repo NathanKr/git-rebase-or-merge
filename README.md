@@ -43,6 +43,20 @@ Use when: working on shared/public branches, or you want accurate history.
 
 Replays commits on top of another branch. Creates new commit hashes.
 
+**Before rebase:**
+
+```mermaid
+gitGraph
+   commit id: "A"
+   commit id: "B"
+   commit id: "C"
+   branch feature
+   commit id: "D"
+   commit id: "E"
+```
+
+**After rebase** (feature replayed on top of main):
+
 ```mermaid
 gitGraph
    commit id: "A"
