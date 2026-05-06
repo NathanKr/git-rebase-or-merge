@@ -25,6 +25,20 @@ Combines branches with a merge commit. Does not rewrite commits.
 
 > `feature` branch merges into `main`
 
+**Before merge:**
+
+```mermaid
+gitGraph
+   commit id: "A"
+   commit id: "B"
+   commit id: "C"
+   branch feature
+   commit id: "D"
+   commit id: "E"
+```
+
+**After merge:**
+
 ```mermaid
 gitGraph
    commit id: "A"
