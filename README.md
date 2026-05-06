@@ -35,6 +35,8 @@ gitGraph
    merge feature id: "M"
 ```
 
+> `M` = merge commit (auto-created by git to join the two branches)
+
 Use when: working on shared/public branches, or you want accurate history.
 
 ### git rebase (rewrites history)
