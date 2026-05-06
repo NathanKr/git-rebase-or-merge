@@ -23,6 +23,8 @@ in many ocations you ask AI question and sometime it use git merge and somtime g
 
 Combines branches with a merge commit. Does not rewrite commits.
 
+> `feature` branch merges into `main`
+
 ```mermaid
 gitGraph
    commit id: "A"
