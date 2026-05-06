@@ -149,11 +149,16 @@ add first commit on feature branch
 
 add second commit on feature branch
 
+![create second commit on feature branch](./figs/create-second-commit-on-feature-branch.png)
 
+Run `git log --oneline --graph --all -5` to visualize 
+We can see the two new commits in feature branch (in red) on top of the commits of main branch (in blue)
 
-
+![list commit in feature branch](./figs/list-commit-in-feature-branch.png)
 
 3. Add 1 more commit to `main` so branches diverge
+
+
 4. Run `git log --oneline --graph --all -5` to visualize before state
 
 ### git merge
