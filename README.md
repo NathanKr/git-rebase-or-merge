@@ -15,6 +15,11 @@ in many ocations you ask AI question and sometime it use git merge and somtime g
 - how commit playes in
 - can we see it grphically
 
+## Key Takeaways
+- Rule of thumb: local/feature branch → rebase; shared/public branch → merge.
+- Rebase branches you fully control; merge branches others depend on.
+- Rebase is often used before merge — clean up your branch first, then merge into the target branch (never rebase a branch others are actively using).
+
 ## Core Concepts: git merge vs git rebase
 
 > Notation: each letter (A, B, C…) represents a commit; `---` is the chain over time (left = oldest, right = newest).
@@ -108,11 +113,6 @@ git log --oneline --graph --all
 | Combine branches      | merge    | Preserves full history of both branches |
 | Prepare clean PR      | rebase   | Cleaner diff for reviewers              |
 | Finalize feature      | merge    | Creates explicit record of the merge    |
-
-## Key Takeaways
-- Rule of thumb: local/feature branch → rebase; shared/public branch → merge.
-- Rebase branches you fully control; merge branches others depend on.
-- Rebase is often used before merge — clean up your branch first, then merge into the target branch (never rebase a branch others are actively using).
 
 ## Installation
 
