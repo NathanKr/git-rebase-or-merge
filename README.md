@@ -11,11 +11,19 @@ The project explains how commits, branches, and history rewriting work internall
 
 ## Motivation
 
-in many ocations you ask AI question and sometime it use git merge and somtime git rebase so question is
-- what exactly each does 
-- when to use each ?
-- how commit playes in
-- can we see it grphically
+When asking AI tools or reading Git tutorials, developers often see both `git merge` and `git rebase` recommended in different situations.
+
+This raises important questions:
+
+- What exactly does each command do?
+- Why does `rebase` rewrite history while `merge` preserves it?
+- How do commits and branches behave internally?
+- What does Git history actually look like?
+- Can we visualize these operations instead of memorizing them?
+
+The confusion usually comes from treating Git as a set of commands instead of understanding the underlying commit graph model.
+
+This project explores `merge` and `rebase` through direct experimentation, commit visualization, and real Git history so the behavior becomes intuitive rather than magical.
 
 ## Key Takeaways
 - Rule of thumb: local/feature branch → rebase; shared/public branch → merge.
@@ -116,21 +124,19 @@ git log --oneline --graph --all
 | Prepare clean PR      | rebase   | Cleaner diff for reviewers              |
 | Finalize feature      | merge    | Creates explicit record of the merge    |
 
-## Installation
 
-...
 
 ## Usage
 
-...
+```bash
+git log --oneline --graph --all -5  # visualize branch history
+git merge feature                   # merge feature into main (run from main)
+git rebase main                     # rebase feature onto main (run from feature)
+git log --oneline --graph -7        # inspect merge result
+git log --oneline --graph -5        # inspect rebase result
+```
 
-## Technologies Used
 
-- git
-
-## Code Structure
-
-...
 
 ## Demo
 
