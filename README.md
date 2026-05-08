@@ -5,7 +5,9 @@
 
 ## Project Description
 
-...
+A visual, command-based learning project for understanding `git merge` and `git rebase` through commit graphs, real repository history, and direct experimentation.
+
+The project explains how commits, branches, and history rewriting work internally — helping developers build an intuitive mental model of Git instead of memorizing commands.
 
 ## Motivation
 
@@ -192,10 +194,9 @@ The merge commit is in red
 
 <!-- add image here -->
 
-## Points of Interest
-- [Item 1]
-- [Item 2]
+
 
 ## References
-- [Link/Reference 1]
-- [Link/Reference 2]
+- [git-merge documentation](https://git-scm.com/docs/git-merge)
+- [git-rebase documentation](https://git-scm.com/docs/git-rebase)
+- [Understanding Git Commits: A Practical Guide](https://youtu.be/6tflUkytj9Q)
