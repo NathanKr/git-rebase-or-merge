@@ -203,7 +203,7 @@ Observe:
 ![linear history after rebase](./figs/linear-history-after-rebase.png)
 
 Observe:
-- feature1's commits got new hashes (`a733dfa`, `4e90b9a`) — same changes, rewritten
+- feature1's commits were rewritten: `99c84b9` → `a733dfa`, `ec36ba5` → `4e90b9a` — same changes, new hashes
 - history is now a straight line — no fork, no merge commit
 - `main`'s new commit (`df3cc4a`) now appears before feature1's commits
 
