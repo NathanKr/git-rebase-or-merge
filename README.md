@@ -138,63 +138,51 @@ git log --oneline --graph -5        # inspect rebase result
 
 ### Setup
 
-#### 1. Create `main` branch with few commits (e.g. edit README.md) and Run `git log --oneline --graph --all -5` to visualize 
+#### 1. Create `main` branch with a few commits and run `git log --oneline --graph --all -5` to visualize
 
 ![git log main demo start](./figs/git-log-main-demo-start.png)
 
-#### 2. Branch off to `feature` and add 2 commits
+Observe:
+- `main` has a linear sequence of commits
+- no branches yet — history is a single chain
 
+#### 2. Branch off to `feature`, add 2 commits, then add 1 more commit to `main` so branches diverge
 
-![create feature branch](./figs/create-feature-branch.png)
-
-add first commit on feature branch
-
-![create one commit on feature ranch](./figs/create-one-commit-on-feature-branch.png)
-
-add second commit on feature branch
-
-![create second commit on feature branch](./figs/create-second-commit-on-feature-branch.png)
-
-Run `git log --oneline --graph --all -5` to visualize 
-We can see the two new commits in feature branch (in red) on top of the commits of main branch (in blue)
-
-![list commit in feature branch](./figs/list-commit-in-feature-branch.png)
-
-commit all changes
-![commit all changes in feature branch](./figs/commit-all-changes-in-feature-branch.png)
-
-#### 3. Add 1 more commit to `main` so branches diverge
-
-![add commit in main after feature commits](./figs/add-commit-in-main-after-feature-commits.png)
-
-#### 4. Run `git log --oneline --graph --all -5` to visualize before state
+#### 3. Run `git log --oneline --graph --all -5` to visualize diverged state
 
 ![git log show main and feature commits](./figs/git-log-show-main-and-feature-commits.png)
 
-now we can see only main commits
-
-![now we can see only main commits](./figs/git-log-show-only-main-commits.png)
+Observe:
+- `main` and `feature` share a common ancestor but have diverged
+- both branches have commits the other doesn't
+- Git history is a graph, not a list
 
 ### git merge
 
-#### 5. `git checkout main && git merge feature`
-#### 6. Run `git log --oneline --graph -7` to see merge commit M
+#### 4. `git checkout main && git merge feature`
+#### 5. Run `git log --oneline --graph -7` to see merge commit M
 > `--all` omitted — shows only main's result after merge, not all branches.
-
-The merge commit is in red
 
 ![git log after merge show merge commit](./figs/git-log-after-merge-show-merge-commit.png)
 
-<!-- add image here -->
+Observe:
+- a new merge commit M ties both branch tips together
+- both branches' commits are preserved with their original hashes
+- the graph forks and rejoins — history is non-linear
 
 ### git rebase
 
-#### 7. Reset to before-merge state
-#### 8. `git checkout feature && git rebase main`
-#### 9. Run `git log --oneline --graph -5` to see linear history
+#### 6. Reset to before-merge state
+#### 7. `git checkout feature && git rebase main`
+#### 8. Run `git log --oneline --graph -5` to see linear history
 > `--all` omitted — shows only feature's linear history after rebase.
 
 <!-- add image here -->
+
+Observe:
+- feature's commits (D, E) were replayed on top of main as D1, E1 — new hashes, same changes
+- history is now a straight line — no fork, no merge commit
+- the original D and E commits no longer exist on this branch
 
 
 
