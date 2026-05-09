@@ -1,7 +1,7 @@
 
 # Project Name
 
-...
+Merge vs Rebase by Example
 
 ## Project Description
 
@@ -105,11 +105,7 @@ Use when: cleaning up local branches or before opening a PR — rebase makes his
 - merge → commits are preserved
 - rebase → commits are rewritten (new hashes)
 
-### Visualizing history
 
-```bash
-git log --oneline --graph --all
-```
 
 ## Decision Guide
 
