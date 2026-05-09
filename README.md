@@ -172,17 +172,11 @@ Observe:
 #### 6. Create `feature1` branch from `main` and add 2 commits
 #### 7. Run `git log --oneline --graph --all -5`
 
-![feature1 with 2 commits](./figs/feature1-add-2-commits.png)
-
-Observe:
-- `feature1` (HEAD) has 2 new commits on top of `main`'s latest (`19d4369`)
-- no divergence yet — `feature1` is simply ahead
-
 ![feature1 commits vs main commits](./figs/list-after-add-2-commits-in-feature1-branch.png)
 
 Observe:
 - `feature1` commits (blue) and `main` commits (red) clearly distinct
-- still a single linear chain — no fork
+- no divergence yet — `feature1` is simply ahead
 
 #### 8. Add 1 commit to `main`, run `git log --oneline --graph --all -5`
 
@@ -201,7 +195,7 @@ Observe:
 
 Observe:
 - feature1's commits were rewritten: `99c84b9` → `a733dfa`, `ec36ba5` → `4e90b9a` — same changes, new hashes
-- history is now a straight line — no fork, no merge commit
+- history is now linear — Git can traverse commits without switching branches, no merge commit
 - `main`'s new commit (`df3cc4a`) now appears before feature1's commits
 
 
