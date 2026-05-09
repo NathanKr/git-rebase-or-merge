@@ -167,7 +167,7 @@ Observe:
 ![git log after merge show merge commit](./figs/git-log-after-merge-show-merge-commit.png)
 
 Observe:
-- the highlighted commit (`049ae10`) is the merge commit — `|\` below it shows it joins two lines of history
+- the highlighted commit (`049ae10`) is the merge commit
 - feature branch commits appear below it as a separate line joining in
 - both branches' commits are preserved with their original hashes
 
