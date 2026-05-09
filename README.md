@@ -143,8 +143,9 @@ git log --oneline --graph -5        # inspect rebase result
 ![git log main demo start](./figs/git-log-main-demo-start.png)
 
 Observe:
-- `main` has a linear sequence of commits
-- no branches yet — history is a single chain
+- `git branch` confirms only `main` exists
+- all commits (`*`) are in a single linear chain — no branching
+- `HEAD -> main` points to the latest commit
 
 #### 2. Branch off to `feature`, add 2 commits, then add 1 more commit to `main` so branches diverge
 
@@ -153,9 +154,9 @@ Observe:
 ![git log show main and feature commits](./figs/git-log-show-main-and-feature-commits.png)
 
 Observe:
-- `main` and `feature` share a common ancestor but have diverged
-- both branches have commits the other doesn't
-- Git history is a graph, not a list
+- `git branch` shows both `main` and `feature` now exist
+- `main` commits (red, top) and `feature` commits (blue, bottom) diverge from a common ancestor
+- the `/` at the bottom marks where the two branches split
 
 ### git merge
 
@@ -166,9 +167,9 @@ Observe:
 ![git log after merge show merge commit](./figs/git-log-after-merge-show-merge-commit.png)
 
 Observe:
-- a new merge commit M ties both branch tips together
+- the highlighted commit (`049ae10`) is the merge commit — it has two parents (`|\`)
+- feature branch commits appear below it as a separate line joining in
 - both branches' commits are preserved with their original hashes
-- the graph forks and rejoins — history is non-linear
 
 ### git rebase
 
