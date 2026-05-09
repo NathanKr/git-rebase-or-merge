@@ -24,7 +24,7 @@ using direct command-based experimentation and visualization.
 ## Key Takeaways
 - Rule of thumb: local/feature branch → rebase; shared/public branch → merge.
 - Rebase branches you fully control; merge branches others depend on.
-- Rebase is often used before merge — clean up your branch first, then merge into the target branch (never rebase a branch others are actively using).
+- Rebase is often used before merge — make your branch history linear first, then merge into the target branch (never rebase a branch others are actively using).
 
 ## Core Concepts: git merge vs git rebase
 
@@ -98,7 +98,7 @@ gitGraph
    commit id: "E1"
 ```
 
-Use when: cleaning up local branches or before opening a PR — rebase makes history linear so reviewers see a clean, easy-to-follow commit sequence.
+Use when: reorganizing local branch history or before opening a PR — rebase makes history linear so reviewers see an easy-to-follow commit sequence.
 
 ### How commits behave
 
@@ -113,7 +113,7 @@ Use when: cleaning up local branches or before opening a PR — rebase makes his
 |-----------------------|----------|-----------------------------------------|
 | Update my branch      | rebase   | Keeps history linear, no merge commit   |
 | Combine branches      | merge    | Preserves full history of both branches |
-| Prepare clean PR      | rebase   | Cleaner diff for reviewers              |
+| Prepare clean PR      | rebase   | Linear history is easier to review      |
 | Finalize feature      | merge    | Creates explicit record of the merge    |
 
 
