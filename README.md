@@ -194,7 +194,8 @@ Observe:
 
 Observe:
 - `main` (`df3cc4a`, HEAD) and `feature1` (`99c84b9`) now diverge from common ancestor `19d4369`
-- the `|` marks two parallel lines of history
+- `|` next to feature1's commits marks the two branches running in parallel
+- `|/` at the bottom marks where both branches connect back to the common ancestor
 
 #### 9. `git checkout feature1 && git rebase main`
 #### 10. Run `git log --oneline --graph -5`
