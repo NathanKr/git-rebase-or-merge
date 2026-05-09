@@ -192,3 +192,4 @@ Observe:
 - [git-rebase documentation](https://git-scm.com/docs/git-rebase)
 - [Understanding Git Commits: A Practical Guide](https://youtu.be/6tflUkytj9Q)
 - dummy reference1 created in branch feature1
+- dummy reference2 created in branch feature1
