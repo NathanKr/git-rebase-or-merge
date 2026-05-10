@@ -96,13 +96,6 @@ gitGraph
    commit id: "E1"
 ```
 
-### How commits behave
-
-- merge → commits are preserved
-- rebase → commits are rewritten (new hashes)
-
-
-
 ## Decision Guide
 
 | Goal                  | Command  | Why                                     |
