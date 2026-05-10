@@ -68,8 +68,8 @@ gitGraph
 
 ### git rebase — `git checkout feature && git rebase main` (rewrites history)
 
-> **Base** = the parent commit your branch originally diverged from.
-> **Re-base** = change that base to a new one (e.g. the tip of `main`), then replay your commits from there.
+> **Base** = the commit your branch is considered to start from in a given operation (usually the common ancestor).
+> **Rebase** = replay commits from your branch onto a new starting point, creating new commits with new parents.
 
 Moves (replays) commits onto a new base commit (the target branch tip, e.g. `main`), creating new commit hashes and producing a linear history.
 
@@ -86,22 +86,27 @@ gitGraph
    checkout feature
    commit id: "D"
    commit id: "E"
+   checkout main
+   commit id: "F"
 ```
 
-> `C` is the common ancestor — this is where `feature` branched off.
+> `C` is the base commit — the common ancestor where `feature` branched off. `main` moved forward to `F` while you worked.
 
-**After rebase** (history becomes linear — same changes, new hashes):
+**After rebase** (feature replayed on top of latest main — same changes, new hashes):
 
 ```mermaid
 gitGraph
    commit id: "A"
    commit id: "B"
    commit id: "C"
+   commit id: "F"
+   branch feature
+   checkout feature
    commit id: "D1"
    commit id: "E1"
 ```
 
-> The same commits are now replayed on top of `main`'s tip, forming a new linear history.
+> `D1` and `E1` are replayed copies of `D` and `E`, now based on `F` (the latest `main` commit).
 
 ## Decision Guide
 
