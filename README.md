@@ -28,7 +28,7 @@ using direct command-based experimentation and visualization.
 
 ## Core Concepts: git merge vs git rebase
 
-> Notation: each letter (A, B, C…) represents a commit; `---` is the chain over time (left = oldest, right = newest).
+> Notation: each letter (A, B, C…) represents a commit; left = oldest, right = newest.
 
 ### git merge (preserves history)
 
@@ -85,7 +85,7 @@ gitGraph
    commit id: "E"
 ```
 
-**After rebase** (history becomes linear — D1 and E1 have the same changes as D and E but with new hashes):
+**After rebase** (history becomes linear — same changes, new hashes):
 
 ```mermaid
 gitGraph
@@ -105,8 +105,6 @@ gitGraph
 | Prepare clean PR      | rebase   | Linear history is easier to review      |
 | Finalize feature      | merge    | Creates explicit record of the merge    |
 
-
-
 ## Usage
 
 ```bash
@@ -116,8 +114,6 @@ git rebase main                     # rebase feature onto main (run from feature
 git log --oneline --graph -7        # inspect merge result
 git log --oneline --graph -5        # inspect rebase result
 ```
-
-
 
 ## Demo
 
@@ -186,8 +182,6 @@ Observe:
 - feature1's commits were rewritten: `99c84b9` → `a733dfa`, `ec36ba5` → `4e90b9a` — same changes, new hashes
 - history is now linear — Git can traverse commits without switching branches, no merge commit
 - `main`'s new commit (`df3cc4a`) now appears before feature1's commits
-
-
 
 ## References
 - [git-merge documentation](https://git-scm.com/docs/git-merge)
