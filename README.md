@@ -125,11 +125,10 @@ gitGraph
 ## Usage
 
 ```bash
-git log --oneline --graph --all -5  # visualize branch history
 git merge feature                   # merge feature into main (run from main)
 git rebase main                     # rebase feature onto main (run from feature)
-git log --oneline --graph -7        # inspect merge result
-git log --oneline --graph -5        # inspect rebase result
+git log --oneline --graph           # visualize current branch history
+git log --oneline --graph --all     # visualize all branches
 ```
 
 ## Demo
