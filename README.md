@@ -133,6 +133,8 @@ git log --oneline --graph --all     # visualize all branches
 
 ## Demo
 
+Step-by-step commands and git log output showing merge and rebase in a real repository.
+
 ### Setup
 
 #### 1. Create `main` branch with a few commits and run `git log --oneline --graph --all -5` to visualize
