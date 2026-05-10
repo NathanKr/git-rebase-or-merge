@@ -47,6 +47,8 @@ gitGraph
    checkout feature
    commit id: "D"
    commit id: "E"
+   checkout main
+   commit id: "F"
 ```
 
 **After merge** (history stays branched):
@@ -61,10 +63,11 @@ gitGraph
    commit id: "D"
    commit id: "E"
    checkout main
+   commit id: "F"
    merge feature id: "M"
 ```
 
-> `M` = merge commit (auto-created by git to join the two branches)
+> `M` = merge commit (auto-created by git to join the two branches). `F` is a commit on `main` made while `feature` was in progress.
 
 ### git rebase — `git checkout feature && git rebase main` (rewrites history)
 
