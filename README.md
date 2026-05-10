@@ -66,8 +66,6 @@ gitGraph
 
 > `M` = merge commit (auto-created by git to join the two branches)
 
-Use when: working on shared/public branches — merge preserves the full history so others can see exactly what happened and when.
-
 ### git rebase (rewrites history)
 
 Moves (replays) commits onto a new base commit, creating new commit hashes and producing a linear history.
@@ -97,8 +95,6 @@ gitGraph
    commit id: "D1"
    commit id: "E1"
 ```
-
-Use when: reorganizing local branch history or before opening a PR — rebase makes history linear so reviewers see an easy-to-follow commit sequence.
 
 ### How commits behave
 
