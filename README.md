@@ -98,12 +98,12 @@ gitGraph
 
 ## Decision Guide
 
-| Goal             | Command | When                                                           | Example                                   |
-|------------------|---------|----------------------------------------------------------------|-------------------------------------------|
-| Update my branch | rebase  | `main` moved ahead while you worked on `feature`               | `git checkout feature && git rebase main` |
-| Combine branches | merge   | `feature` is complete and ready to integrate into `main`       | `git checkout main && git merge feature`  |
-| Prepare clean PR | rebase  | before opening a PR, replay feature commits onto latest `main` | `git checkout feature && git rebase main` |
-| Finalize feature | merge   | PR approved and ready to land in `main`                        | `git checkout main && git merge feature`  |
+| Goal             | Command | When                                                                                        | Example                                   |
+|------------------|---------|--------------------------------------------------------------------------------------------|-------------------------------------------|
+| Update my branch | rebase  | `main` moved ahead while you worked on `feature` — avoids conflicts when you merge later   | `git checkout feature && git rebase main` |
+| Combine branches | merge   | `feature` is complete and ready to integrate into `main`                                   | `git checkout main && git merge feature`  |
+| Prepare clean PR | rebase  | before opening a PR after main moved — keeps diff clean so reviewers see only your changes | `git checkout feature && git rebase main` |
+| Finalize feature | merge   | PR approved and ready to land in `main` — creates a permanent record of the feature merge  | `git checkout main && git merge feature`  |
 
 ## Usage
 
