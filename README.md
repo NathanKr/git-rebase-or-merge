@@ -98,7 +98,7 @@ gitGraph
 
 ## Decision Guide
 
-| Goal             | Command | When                                                                                        | Example                                   |
+| Goal             | Command | When & Why                                                                                  | Example                                   |
 |------------------|---------|--------------------------------------------------------------------------------------------|-------------------------------------------|
 | Update my branch | rebase  | `main` moved ahead while you worked on `feature` — avoids conflicts when you merge later   | `git checkout feature && git rebase main` |
 | Combine branches | merge   | `feature` is complete and ready to integrate into `main`                                   | `git checkout main && git merge feature`  |
