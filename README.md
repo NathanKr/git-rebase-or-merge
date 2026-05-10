@@ -158,8 +158,7 @@ Observe:
 ### git merge
 
 #### 4. `git checkout main && git merge feature`
-#### 5. Run `git log --oneline --graph -7` to see merge commit M
-> `--all` omitted — shows only main's result after merge, not all branches.
+#### 5. Run `git log --oneline --graph --all -7` to see merge commit M
 
 ![git log after merge show merge commit](./figs/git-log-after-merge-show-merge-commit.png)
 
