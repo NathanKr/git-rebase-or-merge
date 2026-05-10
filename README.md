@@ -139,7 +139,9 @@ Step-by-step commands and git log output showing merge and rebase in a real repo
 
 Creates the initial repository state with a `main` branch and a diverged `feature` branch used in the merge and rebase demos.
 
-#### 1. Create `main` branch with a few commits and run `git log --oneline --graph --all -5` to visualize
+#### 1. Create main branch with a few commits 
+
+ run `git log --oneline --graph --all -5` to visualize
 
 ![git log main demo start](./figs/git-log-main-demo-start.png)
 
@@ -148,9 +150,13 @@ Observe:
 - all commits (`*`) are in a single linear chain — no branching
 - `HEAD -> main` points to the latest commit
 
-#### 2. Branch off to `feature`, add 2 commits, then add 1 more commit to `main` so branches diverge
+#### 2. Diverge branches 
 
-#### 3. Run `git log --oneline --graph --all -5` to visualize diverged state
+Branch off to `feature`, add 2 commits, then add 1 more commit to `main` 
+
+#### 3.  Visualize diverged state 
+
+Run `git log --oneline --graph --all -5` to
 
 ![git log show main and feature commits](./figs/git-log-show-main-and-feature-commits.png)
 
@@ -163,8 +169,11 @@ Observe:
 
 Shows the result of merging a feature branch into main, including the merge commit in history.
 
-#### 4. `git checkout main && git merge feature`
-#### 5. Run `git log --oneline --graph --all -7` to see merge commit M
+ **4. `git checkout main && git merge feature`**
+
+#### 5. Merge commit M
+
+Run `git log --oneline --graph --all -7` to see 
 
 ![git log after merge show merge commit](./figs/git-log-after-merge-show-merge-commit.png)
 
@@ -177,9 +186,9 @@ Observe:
 
 Shows the result of rebasing a feature branch onto main, producing a linear history with rewritten commits.
 
- **6. Create `feature1` branch from `main` and add 2 commits**
+**6. Create `feature1` branch from `main` and add 2 commits**
 
-#### 7. Run `git log --oneline --graph --all -5`
+**7. Run `git log --oneline --graph --all -5`**
 
 ![feature1 commits vs main commits](./figs/list-after-add-2-commits-in-feature1-branch.png)
 
@@ -187,7 +196,7 @@ Observe:
 - `feature1` commits (blue) and `main` commits (red) clearly distinct
 - no divergence yet — `feature1` is simply ahead
 
-#### 8. Add 1 commit to `main`, run `git log --oneline --graph --all -5`
+**8. Add 1 commit to `main`, run `git log --oneline --graph --all -5`**
 
 ![dag with feature1 branch diverged](./figs/dag-with-feature1-branch.png)
 
@@ -198,7 +207,8 @@ Observe:
 
 **9. `git checkout feature1 && git rebase main`**
 
-#### 10. Run `git log --oneline --graph -5`
+**10. Run `git log --oneline --graph -5`**
+
 > `--all` omitted — shows only feature1's linear history after rebase.
 
 ![linear history after rebase](./figs/linear-history-after-rebase.png)
