@@ -175,7 +175,8 @@ Observe:
 
 Shows the result of rebasing a feature branch onto main, producing a linear history with rewritten commits.
 
-#### 6. Create `feature1` branch from `main` and add 2 commits
+ **6. Create `feature1` branch from `main` and add 2 commits**
+
 #### 7. Run `git log --oneline --graph --all -5`
 
 ![feature1 commits vs main commits](./figs/list-after-add-2-commits-in-feature1-branch.png)
@@ -193,7 +194,8 @@ Observe:
 - `|` next to feature1's commits marks the two branches running in parallel
 - `|/` at the bottom marks where both branches connect back to the common ancestor
 
-#### 9. `git checkout feature1 && git rebase main`
+**9. `git checkout feature1 && git rebase main`**
+
 #### 10. Run `git log --oneline --graph -5`
 > `--all` omitted — shows only feature1's linear history after rebase.
 
