@@ -159,6 +159,8 @@ Observe:
 
 ### git merge
 
+Shows the result of merging a feature branch into main, including the merge commit in history.
+
 #### 4. `git checkout main && git merge feature`
 #### 5. Run `git log --oneline --graph --all -7` to see merge commit M
 
@@ -170,6 +172,8 @@ Observe:
 - both branches' commits are preserved with their original hashes
 
 ### git rebase
+
+Shows the result of rebasing a feature branch onto main, producing a linear history with rewritten commits.
 
 #### 6. Create `feature1` branch from `main` and add 2 commits
 #### 7. Run `git log --oneline --graph --all -5`
