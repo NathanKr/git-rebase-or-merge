@@ -30,7 +30,7 @@ using direct command-based experimentation and visualization.
 
 > Notation: each letter (A, B, C…) represents a commit; left = oldest, right = newest.
 
-### git merge (preserves history)
+### git merge — `git checkout main && git merge feature` (preserves history)
 
 Creates a new merge commit that combines two branch histories while preserving the original commits and branch structure.
 
@@ -66,7 +66,7 @@ gitGraph
 
 > `M` = merge commit (auto-created by git to join the two branches)
 
-### git rebase (rewrites history)
+### git rebase — `git checkout feature && git rebase main` (rewrites history)
 
 Moves (replays) commits onto a new base commit, creating new commit hashes and producing a linear history.
 
