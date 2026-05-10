@@ -71,7 +71,7 @@ gitGraph
 > **Base** = the commit your branch is considered to start from in a given operation (usually the common ancestor).
 > **Rebase** = replay commits from your branch onto a new starting point, creating new commits with new parents.
 
-Moves (replays) commits onto a new base commit (the target branch tip, e.g. `main`), creating new commit hashes and producing a linear history.
+Moves (replays) commits onto a new starting point (usually the target branch tip, e.g. `main`), creating new commit hashes and producing a linear history.
 
 > `feature` branch rebases onto `main`
 
@@ -106,7 +106,7 @@ gitGraph
    commit id: "E1"
 ```
 
-> `D1` and `E1` are replayed copies of `D` and `E`, now based on `F` (the latest `main` commit).
+> `D1` and `E1` are rewritten commits from `D` and `E`, now replayed on top of `F` (the latest `main` commit).
 
 ## Decision Guide
 
