@@ -73,6 +73,8 @@ gitGraph
 
 Moves (replays) commits onto a new starting point (usually the target branch tip, e.g. `main`), creating new commit hashes and producing a linear history.
 
+> Only the branch being rebased is rewritten. In this case, `feature` changes; `main` stays untouched.
+
 > `feature` branch rebases onto `main`
 
 **Before rebase:**
