@@ -32,7 +32,7 @@ using direct command-based experimentation and visualization.
 
 ### git merge (preserves history)
 
-Combines branches with a merge commit. Does not rewrite commits.
+Creates a new merge commit that combines two branch histories while preserving the original commits and branch structure.
 
 > `feature` branch merges into `main`
 
@@ -70,7 +70,7 @@ Use when: working on shared/public branches — merge preserves the full history
 
 ### git rebase (rewrites history)
 
-Replays commits on top of another branch. Creates new commit hashes.
+Moves (replays) commits onto a new base commit, creating new commit hashes and producing a linear history.
 
 > `feature` branch rebases onto `main`
 
