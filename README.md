@@ -68,7 +68,8 @@ gitGraph
 
 ### git rebase — `git checkout feature && git rebase main` (rewrites history)
 
-> **Base commit** = the commit your branch is attached to — the point where it diverged from another branch.
+> **Base** = the parent commit your branch originally diverged from.
+> **Re-base** = change that base to a new one (e.g. the tip of `main`), then replay your commits from there.
 
 Moves (replays) commits onto a new base commit (the target branch tip, e.g. `main`), creating new commit hashes and producing a linear history.
 
