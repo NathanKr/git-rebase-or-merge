@@ -98,12 +98,12 @@ gitGraph
 
 ## Decision Guide
 
-| Goal                  | Command  | Why                                     |
-|-----------------------|----------|-----------------------------------------|
-| Update my branch      | rebase   | Keeps history linear, no merge commit   |
-| Combine branches      | merge    | Preserves full history of both branches |
-| Prepare clean PR      | rebase   | Linear history is easier to review      |
-| Finalize feature      | merge    | Creates explicit record of the merge    |
+| Goal             | Command | When                                                           | Example                                   |
+|------------------|---------|----------------------------------------------------------------|-------------------------------------------|
+| Update my branch | rebase  | `main` moved ahead while you worked on `feature`               | `git checkout feature && git rebase main` |
+| Combine branches | merge   | `feature` is complete and ready to integrate into `main`       | `git checkout main && git merge feature`  |
+| Prepare clean PR | rebase  | before opening a PR, replay feature commits onto latest `main` | `git checkout feature && git rebase main` |
+| Finalize feature | merge   | PR approved and ready to land in `main`                        | `git checkout main && git merge feature`  |
 
 ## Usage
 
