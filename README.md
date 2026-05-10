@@ -88,6 +88,8 @@ gitGraph
    commit id: "E"
 ```
 
+> `C` is the common ancestor — this is where `feature` branched off.
+
 **After rebase** (history becomes linear — same changes, new hashes):
 
 ```mermaid
@@ -99,7 +101,7 @@ gitGraph
    commit id: "E1"
 ```
 
-> In the diagram above, the branch is now attached to the new base commit (the latest commit on `main`). The commits D1 and E1 are replayed on top of it instead of their original base.
+> The same commits are now replayed on top of `main`'s tip, forming a new linear history.
 
 ## Decision Guide
 
