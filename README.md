@@ -68,7 +68,9 @@ gitGraph
 
 ### git rebase — `git checkout feature && git rebase main` (rewrites history)
 
-Moves (replays) commits onto a new base commit, creating new commit hashes and producing a linear history.
+> **Base commit** = the commit your branch is attached to — the point where it diverged from another branch.
+
+Moves (replays) commits onto a new base commit (the target branch tip, e.g. `main`), creating new commit hashes and producing a linear history.
 
 > `feature` branch rebases onto `main`
 
@@ -95,6 +97,8 @@ gitGraph
    commit id: "D1"
    commit id: "E1"
 ```
+
+> In the diagram above, the branch is now attached to the new base commit (the latest commit on `main`). The commits D1 and E1 are replayed on top of it instead of their original base.
 
 ## Decision Guide
 
