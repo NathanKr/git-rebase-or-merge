@@ -137,6 +137,8 @@ Step-by-step commands and git log output showing merge and rebase in a real repo
 
 ### Setup
 
+Creates the initial repository state with a `main` branch and a diverged `feature` branch used in the merge and rebase demos.
+
 #### 1. Create `main` branch with a few commits and run `git log --oneline --graph --all -5` to visualize
 
 ![git log main demo start](./figs/git-log-main-demo-start.png)
